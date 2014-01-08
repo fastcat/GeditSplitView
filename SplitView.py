@@ -124,14 +124,14 @@ class SplitView:
 
             # Create a scrolled window for the left / top side.
             sw1 = Gtk.ScrolledWindow()
-            sw1.add_with_viewport(old_view)
+            sw1.add(old_view)
 
             # Set up a new View object
             new_view = Gedit.View.new(current_document)
 
             # Second scrolled window.
             sw2 = Gtk.ScrolledWindow()
-            sw2.add_with_viewport(new_view)
+            sw2.add(new_view)
 
             # Add the two scrolled windows to our Paned object.
             self.split_views[current_tab].add1(sw1)
